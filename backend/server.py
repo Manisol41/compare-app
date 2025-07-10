@@ -41,7 +41,7 @@ MOCK_RESTAURANTS = [
         "id": "1",
         "name": "McDonald's",
         "cuisine_type": "Fast Food",
-        "image_url": "https://images.unsplash.com/photo-1555992336-03a23c73e0c6?w=400&h=300&fit=crop",
+        "image_url": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&h=300&fit=crop",
         "average_rating": 4.2,
         "estimated_delivery_time": "25-35 min",
         "location": "Downtown"
@@ -50,7 +50,7 @@ MOCK_RESTAURANTS = [
         "id": "2", 
         "name": "Pizza Hut",
         "cuisine_type": "Pizza",
-        "image_url": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop",
+        "image_url": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop",
         "average_rating": 4.1,
         "estimated_delivery_time": "30-40 min",
         "location": "Midtown"
@@ -59,7 +59,7 @@ MOCK_RESTAURANTS = [
         "id": "3",
         "name": "Burger King",
         "cuisine_type": "Fast Food", 
-        "image_url": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop",
+        "image_url": "https://images.unsplash.com/photo-1520072959219-c595dc870360?w=400&h=300&fit=crop",
         "average_rating": 4.0,
         "estimated_delivery_time": "20-30 min",
         "location": "Downtown"
@@ -68,7 +68,7 @@ MOCK_RESTAURANTS = [
         "id": "4",
         "name": "Subway",
         "cuisine_type": "Sandwiches",
-        "image_url": "https://images.unsplash.com/photo-1539252554453-80ab65ce3586?w=400&h=300&fit=crop",
+        "image_url": "https://images.unsplash.com/photo-1547584370-2cc98b8b8dc8?w=400&h=300&fit=crop",
         "average_rating": 4.3,
         "estimated_delivery_time": "15-25 min",
         "location": "Uptown"
@@ -77,7 +77,7 @@ MOCK_RESTAURANTS = [
         "id": "5",
         "name": "Domino's Pizza",
         "cuisine_type": "Pizza",
-        "image_url": "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?w=400&h=300&fit=crop",
+        "image_url": "https://images.unsplash.com/photo-1585238342024-78d387f4a707?w=400&h=300&fit=crop",
         "average_rating": 4.2,
         "estimated_delivery_time": "20-30 min",
         "location": "Midtown"
@@ -86,7 +86,7 @@ MOCK_RESTAURANTS = [
         "id": "6",
         "name": "KFC",
         "cuisine_type": "Fast Food",
-        "image_url": "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=400&h=300&fit=crop",
+        "image_url": "https://images.unsplash.com/photo-1562967914-608f82629710?w=400&h=300&fit=crop",
         "average_rating": 4.1,
         "estimated_delivery_time": "25-35 min",
         "location": "Downtown"
@@ -95,7 +95,7 @@ MOCK_RESTAURANTS = [
         "id": "7",
         "name": "Taco Bell",
         "cuisine_type": "Mexican",
-        "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop",
+        "image_url": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=400&h=300&fit=crop",
         "average_rating": 4.0,
         "estimated_delivery_time": "20-30 min",
         "location": "Uptown"
@@ -104,7 +104,7 @@ MOCK_RESTAURANTS = [
         "id": "8",
         "name": "Panda Express",
         "cuisine_type": "Asian",
-        "image_url": "https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=400&h=300&fit=crop",
+        "image_url": "https://images.unsplash.com/photo-1563379091339-03246963d7d3?w=400&h=300&fit=crop",
         "average_rating": 4.3,
         "estimated_delivery_time": "25-35 min",
         "location": "Midtown"
