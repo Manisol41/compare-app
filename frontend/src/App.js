@@ -21,6 +21,40 @@ const App = () => {
   const [userStats, setUserStats] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  // Food categories with images
+  const foodCategories = [
+    {
+      name: 'Fast Food',
+      image: 'https://images.unsplash.com/photo-1627955280978-f54fff2f316a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxjdWlzaW5lJTIwdHlwZXN8ZW58MHx8fHwxNzUyMTE2OTUzfDA&ixlib=rb-4.1.0&q=85',
+      cuisineType: 'Fast Food'
+    },
+    {
+      name: 'Pizza',
+      image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop',
+      cuisineType: 'Pizza'
+    },
+    {
+      name: 'Mexican',
+      image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop',
+      cuisineType: 'Mexican'
+    },
+    {
+      name: 'Asian',
+      image: 'https://images.unsplash.com/photo-1644647849404-bba4739704e3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwzfHxjdWlzaW5lJTIwdHlwZXN8ZW58MHx8fHwxNzUyMTE2OTUzfDA&ixlib=rb-4.1.0&q=85',
+      cuisineType: 'Asian'
+    },
+    {
+      name: 'Sandwiches',
+      image: 'https://images.unsplash.com/photo-1539252554453-80ab65ce3586?w=400&h=300&fit=crop',
+      cuisineType: 'Sandwiches'
+    },
+    {
+      name: 'All Food',
+      image: 'https://images.unsplash.com/photo-1578960281840-cb36759fb109?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwyfHxmb29kJTIwY2F0ZWdvcmllc3xlbnwwfHx8fDE3NTIxMTY5NDd8MA&ixlib=rb-4.1.0&q=85',
+      cuisineType: ''
+    }
+  ];
+
   // Set up axios interceptor for auth
   useEffect(() => {
     if (token) {
@@ -100,12 +134,12 @@ const App = () => {
     setUserStats(null);
   };
 
-  const searchRestaurants = async () => {
+  const searchRestaurants = async (cuisineFilter = null) => {
     setLoading(true);
     try {
       const params = new URLSearchParams();
       if (searchQuery) params.append('q', searchQuery);
-      if (selectedCuisine) params.append('cuisine', selectedCuisine);
+      if (cuisineFilter || selectedCuisine) params.append('cuisine', cuisineFilter || selectedCuisine);
       
       const response = await axios.get(`/restaurants/search?${params}`);
       setRestaurants(response.data);
@@ -327,18 +361,20 @@ const App = () => {
   const HomePage = () => (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Hero Section */}
+        <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Compare Food Delivery Prices and Save Money
+            Compare Food Delivery Prices
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Find the best deals across DoorDash, Uber Eats, and Grubhub
+            Find the best deals across Wolt, Foody, and Bolt
           </p>
           
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <div className="flex flex-col sm:flex-row gap-4 mb-4">
+          {/* Search Bar */}
+          <div className="max-w-2xl mx-auto mb-8">
+            <div className="bg-white rounded-lg shadow-md p-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <input
                   type="text"
                   placeholder="Search restaurants..."
@@ -346,45 +382,73 @@ const App = () => {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-                <select
-                  value={selectedCuisine}
-                  onChange={(e) => setSelectedCuisine(e.target.value)}
-                  className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                <button
+                  onClick={() => searchRestaurants()}
+                  disabled={loading}
+                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors disabled:bg-gray-400"
                 >
-                  <option value="">All Cuisines</option>
-                  <option value="Fast Food">Fast Food</option>
-                  <option value="Pizza">Pizza</option>
-                  <option value="Mexican">Mexican</option>
-                  <option value="Asian">Asian</option>
-                  <option value="Sandwiches">Sandwiches</option>
-                </select>
+                  {loading ? 'Searching...' : '🔍 Search'}
+                </button>
               </div>
-              <button
-                onClick={searchRestaurants}
-                disabled={loading}
-                className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors disabled:bg-gray-400"
-              >
-                {loading ? 'Searching...' : '🔍 Search Restaurants'}
-              </button>
             </div>
           </div>
+        </div>
 
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <div className="text-4xl mb-4">💰</div>
-              <h3 className="text-xl font-semibold mb-2">Save Money</h3>
-              <p className="text-gray-600">Compare prices across all major delivery platforms</p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-semibold mb-2">Quick Comparison</h3>
-              <p className="text-gray-600">See all prices at a glance with best deals highlighted</p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <div className="text-4xl mb-4">❤️</div>
-              <h3 className="text-xl font-semibold mb-2">Save Favorites</h3>
-              <p className="text-gray-600">Keep track of your favorite restaurants</p>
-            </div>
+        {/* Food Categories */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Browse by Category</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {foodCategories.map((category, index) => (
+              <div
+                key={index}
+                onClick={() => searchRestaurants(category.cuisineType)}
+                className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow"
+              >
+                <img
+                  src={category.image}
+                  alt={category.name}
+                  className="w-full h-24 object-cover"
+                />
+                <div className="p-3">
+                  <h4 className="font-semibold text-gray-900 text-center text-sm">
+                    {category.name}
+                  </h4>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Popular Restaurants Preview */}
+        <div className="text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">Popular Restaurants</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { name: "McDonald's", image: "https://images.unsplash.com/photo-1555992336-03a23c73e0c6?w=400&h=300&fit=crop" },
+              { name: "Pizza Hut", image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop" },
+              { name: "KFC", image: "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=400&h=300&fit=crop" },
+              { name: "Subway", image: "https://images.unsplash.com/photo-1539252554453-80ab65ce3586?w=400&h=300&fit=crop" }
+            ].map((restaurant, index) => (
+              <div
+                key={index}
+                onClick={() => {
+                  setSearchQuery(restaurant.name);
+                  searchRestaurants();
+                }}
+                className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow"
+              >
+                <img
+                  src={restaurant.image}
+                  alt={restaurant.name}
+                  className="w-full h-32 object-cover"
+                />
+                <div className="p-4">
+                  <h4 className="font-semibold text-gray-900 text-center">
+                    {restaurant.name}
+                  </h4>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </main>

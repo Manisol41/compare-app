@@ -113,44 +113,44 @@ MOCK_RESTAURANTS = [
 
 MOCK_PRICES = {
     "1": [  # McDonald's
-        {"platform": "DoorDash", "base_price": 12.99, "delivery_fee": 2.99, "service_fee": 1.50, "tax": 1.52, "total": 19.00},
-        {"platform": "Uber Eats", "base_price": 12.99, "delivery_fee": 0.99, "service_fee": 2.00, "tax": 1.52, "total": 17.50},
-        {"platform": "Grubhub", "base_price": 13.49, "delivery_fee": 3.49, "service_fee": 1.25, "tax": 1.62, "total": 19.85}
+        {"platform": "Wolt", "base_price": 12.99, "delivery_fee": 2.99, "service_fee": 1.50, "tax": 1.52, "total": 19.00},
+        {"platform": "Foody", "base_price": 12.99, "delivery_fee": 0.99, "service_fee": 2.00, "tax": 1.52, "total": 17.50},
+        {"platform": "Bolt", "base_price": 13.49, "delivery_fee": 3.49, "service_fee": 1.25, "tax": 1.62, "total": 19.85}
     ],
     "2": [  # Pizza Hut  
-        {"platform": "DoorDash", "base_price": 18.99, "delivery_fee": 3.99, "service_fee": 2.50, "tax": 2.30, "total": 27.78},
-        {"platform": "Uber Eats", "base_price": 17.99, "delivery_fee": 1.99, "service_fee": 2.75, "tax": 2.18, "total": 24.91},
-        {"platform": "Grubhub", "base_price": 19.49, "delivery_fee": 4.49, "service_fee": 2.25, "tax": 2.37, "total": 28.60}
+        {"platform": "Wolt", "base_price": 18.99, "delivery_fee": 3.99, "service_fee": 2.50, "tax": 2.30, "total": 27.78},
+        {"platform": "Foody", "base_price": 17.99, "delivery_fee": 1.99, "service_fee": 2.75, "tax": 2.18, "total": 24.91},
+        {"platform": "Bolt", "base_price": 19.49, "delivery_fee": 4.49, "service_fee": 2.25, "tax": 2.37, "total": 28.60}
     ],
     "3": [  # Burger King
-        {"platform": "DoorDash", "base_price": 11.49, "delivery_fee": 2.49, "service_fee": 1.75, "tax": 1.39, "total": 17.12},
-        {"platform": "Uber Eats", "base_price": 10.99, "delivery_fee": 0.49, "service_fee": 1.50, "tax": 1.33, "total": 14.31},
-        {"platform": "Grubhub", "base_price": 12.49, "delivery_fee": 3.99, "service_fee": 1.50, "tax": 1.51, "total": 19.49}
+        {"platform": "Wolt", "base_price": 11.49, "delivery_fee": 2.49, "service_fee": 1.75, "tax": 1.39, "total": 17.12},
+        {"platform": "Foody", "base_price": 10.99, "delivery_fee": 0.49, "service_fee": 1.50, "tax": 1.33, "total": 14.31},
+        {"platform": "Bolt", "base_price": 12.49, "delivery_fee": 3.99, "service_fee": 1.50, "tax": 1.51, "total": 19.49}
     ],
     "4": [  # Subway
-        {"platform": "DoorDash", "base_price": 9.99, "delivery_fee": 1.99, "service_fee": 1.25, "tax": 1.21, "total": 14.44},
-        {"platform": "Uber Eats", "base_price": 9.49, "delivery_fee": 0.99, "service_fee": 1.50, "tax": 1.15, "total": 13.13},
-        {"platform": "Grubhub", "base_price": 10.49, "delivery_fee": 2.99, "service_fee": 1.00, "tax": 1.27, "total": 15.75}
+        {"platform": "Wolt", "base_price": 9.99, "delivery_fee": 1.99, "service_fee": 1.25, "tax": 1.21, "total": 14.44},
+        {"platform": "Foody", "base_price": 9.49, "delivery_fee": 0.99, "service_fee": 1.50, "tax": 1.15, "total": 13.13},
+        {"platform": "Bolt", "base_price": 10.49, "delivery_fee": 2.99, "service_fee": 1.00, "tax": 1.27, "total": 15.75}
     ],
     "5": [  # Domino's
-        {"platform": "DoorDash", "base_price": 16.99, "delivery_fee": 3.49, "service_fee": 2.25, "tax": 2.06, "total": 24.79},
-        {"platform": "Uber Eats", "base_price": 15.99, "delivery_fee": 1.49, "service_fee": 2.50, "tax": 1.94, "total": 21.92},
-        {"platform": "Grubhub", "base_price": 17.49, "delivery_fee": 4.99, "service_fee": 2.00, "tax": 2.12, "total": 26.60}
+        {"platform": "Wolt", "base_price": 16.99, "delivery_fee": 3.49, "service_fee": 2.25, "tax": 2.06, "total": 24.79},
+        {"platform": "Foody", "base_price": 15.99, "delivery_fee": 1.49, "service_fee": 2.50, "tax": 1.94, "total": 21.92},
+        {"platform": "Bolt", "base_price": 17.49, "delivery_fee": 4.99, "service_fee": 2.00, "tax": 2.12, "total": 26.60}
     ],
     "6": [  # KFC
-        {"platform": "DoorDash", "base_price": 14.99, "delivery_fee": 2.99, "service_fee": 1.75, "tax": 1.82, "total": 21.55},
-        {"platform": "Uber Eats", "base_price": 13.99, "delivery_fee": 0.99, "service_fee": 2.25, "tax": 1.70, "total": 18.93},
-        {"platform": "Grubhub", "base_price": 15.49, "delivery_fee": 3.99, "service_fee": 1.50, "tax": 1.88, "total": 22.86}
+        {"platform": "Wolt", "base_price": 14.99, "delivery_fee": 2.99, "service_fee": 1.75, "tax": 1.82, "total": 21.55},
+        {"platform": "Foody", "base_price": 13.99, "delivery_fee": 0.99, "service_fee": 2.25, "tax": 1.70, "total": 18.93},
+        {"platform": "Bolt", "base_price": 15.49, "delivery_fee": 3.99, "service_fee": 1.50, "tax": 1.88, "total": 22.86}
     ],
     "7": [  # Taco Bell
-        {"platform": "DoorDash", "base_price": 8.99, "delivery_fee": 1.99, "service_fee": 1.25, "tax": 1.09, "total": 13.32},
-        {"platform": "Uber Eats", "base_price": 8.49, "delivery_fee": 0.49, "service_fee": 1.50, "tax": 1.03, "total": 11.51},
-        {"platform": "Grubhub", "base_price": 9.49, "delivery_fee": 2.99, "service_fee": 1.00, "tax": 1.15, "total": 14.63}
+        {"platform": "Wolt", "base_price": 8.99, "delivery_fee": 1.99, "service_fee": 1.25, "tax": 1.09, "total": 13.32},
+        {"platform": "Foody", "base_price": 8.49, "delivery_fee": 0.49, "service_fee": 1.50, "tax": 1.03, "total": 11.51},
+        {"platform": "Bolt", "base_price": 9.49, "delivery_fee": 2.99, "service_fee": 1.00, "tax": 1.15, "total": 14.63}
     ],
     "8": [  # Panda Express
-        {"platform": "DoorDash", "base_price": 13.99, "delivery_fee": 2.49, "service_fee": 1.75, "tax": 1.70, "total": 19.93},
-        {"platform": "Uber Eats", "base_price": 12.99, "delivery_fee": 0.99, "service_fee": 2.00, "tax": 1.58, "total": 17.56},
-        {"platform": "Grubhub", "base_price": 14.49, "delivery_fee": 3.49, "service_fee": 1.50, "tax": 1.76, "total": 21.24}
+        {"platform": "Wolt", "base_price": 13.99, "delivery_fee": 2.49, "service_fee": 1.75, "tax": 1.70, "total": 19.93},
+        {"platform": "Foody", "base_price": 12.99, "delivery_fee": 0.99, "service_fee": 2.00, "tax": 1.58, "total": 17.56},
+        {"platform": "Bolt", "base_price": 14.49, "delivery_fee": 3.49, "service_fee": 1.50, "tax": 1.76, "total": 21.24}
     ]
 }
 
