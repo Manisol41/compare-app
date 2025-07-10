@@ -424,10 +424,10 @@ const App = () => {
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Popular Restaurants</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "McDonald's", image: "https://images.unsplash.com/photo-1555992336-03a23c73e0c6?w=400&h=300&fit=crop" },
-              { name: "Pizza Hut", image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop" },
-              { name: "KFC", image: "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=400&h=300&fit=crop" },
-              { name: "Subway", image: "https://images.unsplash.com/photo-1539252554453-80ab65ce3586?w=400&h=300&fit=crop" }
+              { name: "McDonald's", image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&h=300&fit=crop" },
+              { name: "Pizza Hut", image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop" },
+              { name: "KFC", image: "https://images.unsplash.com/photo-1562967914-608f82629710?w=400&h=300&fit=crop" },
+              { name: "Subway", image: "https://images.unsplash.com/photo-1547584370-2cc98b8b8dc8?w=400&h=300&fit=crop" }
             ].map((restaurant, index) => (
               <div
                 key={index}
